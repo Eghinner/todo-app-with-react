@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/*Common center css*/
+* { box-sizing: border-box; }
+
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: sans-serif;
+	background-color: grey;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
