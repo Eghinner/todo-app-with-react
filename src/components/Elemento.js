@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 // import PropTypes from 'prop-types'
 //
-const Elemento = ({task}) => {
+const Elemento = ({task, eliminarCita, id}) => {
 
 	// definir states
 	const [complete, setComplete] = useState(false);
@@ -12,7 +12,7 @@ const Elemento = ({task}) => {
 			<li
 				className={complete
 				 ?
-				 "list-group-item d-flex justify-content-between text-decoration-line-through "
+				 "list-group-item d-flex justify-content-between text-decoration-line-through"
 				 :
 				 "list-group-item d-flex justify-content-between"}
 			>
@@ -25,7 +25,9 @@ const Elemento = ({task}) => {
 					{task}
 				</div>
 
-				<i class="fas fa-trash"></i>
+				<i  class="fas fa-trash p-2"
+					onClick={()=>eliminarCita(id)}
+				></i>
 			</li>
 		</div>
 	)

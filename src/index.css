@@ -27,3 +27,11 @@ body {
 	align-items: center;
 }
 
+i {
+  border-radius: 50%;
+}
+
+i:hover {
+  background: lightgray;
+  opacity: .9;
+}

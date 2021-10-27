@@ -22,11 +22,18 @@ function App() {
       id: shortid.generate()
     }
 
+
     setTask([
       ...tasks,
       objtask
     ]);
     setState('');
+  }
+
+  // ELiminar
+  const eliminarCita = id => {
+    const updateTasks = tasks.filter(task => task.id !== id);
+    setTask(updateTasks);
   }
 
   return (
@@ -46,6 +53,7 @@ function App() {
         <ul className="list-group mt-3">
           <Listado
             tasks={tasks}
+            eliminarCita={eliminarCita}
           />
         </ul>
       </React.Fragment>
